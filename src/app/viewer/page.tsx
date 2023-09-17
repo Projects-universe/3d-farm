@@ -9,7 +9,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { useCallback, useState } from 'react'
 
 
-export const initThreeJSScene = (node : HTMLDivElement, url? : string) => {
+const initThreeJSScene = (node : HTMLDivElement, url? : string) => {
   const renderer = new THREE.WebGLRenderer();
   renderer.autoClearColor = false;
   // renderer.domElement.width = width;
