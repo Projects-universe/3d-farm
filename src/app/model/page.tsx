@@ -16,6 +16,7 @@ export const dynamic = "force-dynamic";
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getBaseUrl } from "@/lib/utils";
 
 extend({ BufferGeometry });
 type Props = {
@@ -23,11 +24,12 @@ type Props = {
 };
 
 function MeshComponent(props: Props) {
-  const fileUrl = "./shiba/scene.gltf";
+  const baseUrl = getBaseUrl();
+  const fileUrl = `${baseUrl}/shiba/scene.gltf`;
   // const mesh = useRef<Mesh>(null!);
   const gltf = useGLTF(fileUrl);
 
-  const colormap = useTexture("./futuristic.jpg")
+  const colormap = useTexture(`${baseUrl}/futuristic.jpg`)
 
   useFrame(() => {
     // props.mesh.current.rotation.y += 0.01;
