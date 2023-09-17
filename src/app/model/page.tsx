@@ -41,7 +41,7 @@ function MeshComponent(props: Props) {
   );
 }
 
-const Model = (props: Props) => {
+const Model = () => {
   const fileUrl = "/shiba/scene.gltf";
   const mesh = useRef<Mesh>(null!);
   const gltf = useGLTF(fileUrl);
