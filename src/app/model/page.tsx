@@ -12,6 +12,8 @@ import * as THREE from "three";
 // import {useFrame} from '@react-three/fiber';
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
